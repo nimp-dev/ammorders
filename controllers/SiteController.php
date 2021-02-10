@@ -119,3 +119,4 @@ class SiteController extends \yii\web\Controller
 	    return $this->redirect(['/users/update', 'id' => $currentUser->user_id]);
     }
 }
+?>

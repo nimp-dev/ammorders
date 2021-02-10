@@ -9,6 +9,10 @@
  * @since      1.0
  */
 namespace app\controllers;
+use app\models\Workers;
+use Yii;
+
+
 
 /**
  * Class TablesController
@@ -35,6 +39,21 @@ class TablesController extends \yii\web\Controller
 	 */
     public function actionIndex()
     {
-        return $this->render('index', []);
+        $workList = Workers::Find()->all();
+        $model = new Workers();
+        if($model->load(Yii::$app->request->post()) ){
+            print_r($model);
+//            return $this->render('index', ['workList' => $workList]);
+        } else {
+            return $this->render('index', ['workList' => $workList, 'model' => $model]);
+        }
     }
+
+//    public function actionWorker()
+//    {
+//        $workList = Workers::Find()->all();
+//        print_r($workList);
+//        die;
+//
+//    }
 }
