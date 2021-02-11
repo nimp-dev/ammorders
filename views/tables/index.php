@@ -1,7 +1,9 @@
 <?php
 use yii\widgets\ActiveForm;
 use yii\helpers\Html;
+use yii\helpers\Url;
 ?>
+<script src="https://unpkg.com/vue"></script>
 <div class="content">
     <div class="container-fluid">
       <div class="row">
@@ -157,46 +159,7 @@ use yii\helpers\Html;
             <div class="card-body">
                 <div class="tab-content">
                     <div class="tab-pane active show" id="story">
-                          <div class="table-responsive">
-                            <table class="table table-hover">
-                          <thead class="">
-                            <th>
-                              ID
-                            </th>
-                            <th>
-                              Name
-                            </th>
-                            <th>
-                              Country
-                            </th>
-                            <th>
-                              City
-                            </th>
-                            <th>
-                              Salary
-                            </th>
-                          </thead>
-                          <tbody>
-                          <tr>
-                              <td>
-                                story
-                              </td>
-                              <td>
-                                story
-                              </td>
-                              <td>
-                                story
-                              </td>
-                              <td>
-                                story
-                              </td>
-                              <td>
-                                story
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                          </div>
+                        <p>thi is story</p>
                     </div>
 
                     <div class="tab-pane" id="createstory">
@@ -216,27 +179,24 @@ use yii\helpers\Html;
                                     Time
                                 </th>
                                 </thead>
-                                <?php $form = ActiveForm::begin(); ?>
-                                <?php foreach ($workList as $wlist) :?>
+                                <tbody>
+                                <?php foreach ($workList as $key=> $wlist) :?>
+                                    <tr>
                                         <td>
-                                          <?=   $form->field($model, 'accept')->checkbox([
-                                                 'template' => '<div class="col-md-1">{label}</div><div class="col-md-5">{input}</div><div class="col-md-6">{error}</div>'
-                                             ])?>
+                                            <div> <a class="add-to-cart" href="<?= Url::to(['tables/update','id'=>$wlist['id'] ]) ?>" data-id="<?= $wlist['id'] ?>">
+                                                    <input type="checkbox" checked="checked" /> </a></div>
                                         </td>
                                         <td>
-<!--                                            --><?//= $form->field($model,'week_time')->textInput($wlist['name']) ?>
-                                            <?=$wlist['name'] ?>
+                                            <?= $wlist['name'] ?>
                                         </td>
                                         <td>
-                                            <?=$wlist['last_name'] ?>
+                                            <?= $wlist['last_name'] ?>
                                         </td>
                                         <td>
-                                            <?= $form->field($model,'week_time')->textInput() ?>
+                                            <?= $wlist['week_time'] ?>
                                         </td>
                                     </tr>
                                 <?php endforeach ?>
-                                <?= Html::submitButton('сохранить', ['class' => 'btn btn-success']) ?>
-                                <?php ActiveForm::end(); ?>
                                 </tbody>
                             </table>
                         </div>

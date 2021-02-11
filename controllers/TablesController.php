@@ -40,20 +40,13 @@ class TablesController extends \yii\web\Controller
     public function actionIndex()
     {
         $workList = Workers::Find()->all();
-        $model = new Workers();
-        if($model->load(Yii::$app->request->post()) ){
-            print_r($model);
-//            return $this->render('index', ['workList' => $workList]);
-        } else {
-            return $this->render('index', ['workList' => $workList, 'model' => $model]);
-        }
+
+        return $this->render('index',['workList'=>$workList]);
     }
 
-//    public function actionWorker()
-//    {
-//        $workList = Workers::Find()->all();
-//        print_r($workList);
-//        die;
-//
-//    }
+    public function actionUpdate()
+    {
+
+    }
+
 }
