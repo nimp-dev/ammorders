@@ -10,6 +10,7 @@
  */
 namespace app\controllers;
 use app\models\Workers;
+use app\models\Time_list;
 use Yii;
 
 
@@ -46,6 +47,13 @@ class TablesController extends \yii\web\Controller
 
     public function actionUpdate()
     {
+        $id = Yii::$app->request->get('id');
+        $idworker = Workers::findOne($id);
+        if(empty($idworker)) return false;
+        $session = Yii::$app->session;
+        $session->open();
+        $list = new Time_list();
+        $list->addToList($idworker);
 
     }
 

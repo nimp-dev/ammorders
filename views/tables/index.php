@@ -183,8 +183,8 @@ use yii\helpers\Url;
                                 <?php foreach ($workList as $key=> $wlist) :?>
                                     <tr>
                                         <td>
-                                            <div> <a class="add-to-cart" href="<?= Url::to(['tables/update','id'=>$wlist['id'] ]) ?>" data-id="<?= $wlist['id'] ?>">
-                                                    <input type="checkbox" checked="checked" /> </a></div>
+                                            <div><a class="add-to-cart" href="<?= Url::to(['tables/update','id'=>$wlist['id'] ]) ?>" data-id="<?= $wlist['id'] ?>" >
+                                                   ok </a></div>
                                         </td>
                                         <td>
                                             <?= $wlist['name'] ?>

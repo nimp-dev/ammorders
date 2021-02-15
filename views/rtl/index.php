@@ -711,8 +711,7 @@
     <script src="<?= \Yii::getAlias('@web/js/core/popper.min.js');?>" type="text/javascript"></script>
     <script src="<?= \Yii::getAlias('@web/js/core/bootstrap-material-design.min.js');?>" type="text/javascript"></script>
     <script src="<?= \Yii::getAlias('@web/js/plugins/perfect-scrollbar.jquery.min.js');?>"></script>
-      <!--  Google Maps Plugin    -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB2Yno10-YTnLjjn_Vtk0V8cdcY5lC4plU"></script>
+
       <!-- Place this tag in your head or just before your close body tag. -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
       <!-- Chartist JS -->
