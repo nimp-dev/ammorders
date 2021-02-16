@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="37571492-ede6-4bfa-a2c8-3467452d1574" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/views/tables/time-modal.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/TablesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/TablesController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/access.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/access.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/Time_list.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/Time_list.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/tables/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/tables/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/js/scripts.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/scripts.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +18,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -171,6 +177,9 @@
       <workItem from="1613467338169" duration="2145000" />
       <workItem from="1613469494618" duration="676000" />
       <workItem from="1613471620674" duration="620000" />
+      <workItem from="1613476381396" duration="1631000" />
+      <workItem from="1613478208539" duration="911000" />
+      <workItem from="1613482209177" duration="115000" />
     </task>
     <servers />
   </component>

@@ -56,8 +56,10 @@ class TablesController extends \yii\web\Controller
         $session->open();
         $list = new Time_list();
         $list->addToList($idworker, $time);
-            debug($session['Time_list']);
-        debug($session['Time_list.week_time']);
+//            debug($session['Time_list']);
+//        debug($session['Time_list.week_time']);
+        $this->layout = false;
+        return $this->render('time-modal',compact('session'));
 
     }
 
