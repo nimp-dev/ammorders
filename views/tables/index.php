@@ -184,7 +184,11 @@ use yii\helpers\Url;
                                     <tr>
                                         <td>
                                             <div><a class="add-to-cart" href="<?= Url::to(['tables/update','id'=>$wlist['id'] ]) ?>" data-id="<?= $wlist['id'] ?>" >
-                                                   ok </a></div>
+
+                                                    <input type="checkbox" />
+
+                                                </a></div>
+
                                         </td>
                                         <td>
                                             <?= $wlist['name'] ?>
@@ -193,7 +197,8 @@ use yii\helpers\Url;
                                             <?= $wlist['last_name'] ?>
                                         </td>
                                         <td>
-                                            <?= $wlist['week_time'] ?>
+                                            <input type="text" value="8" id="time"/>
+
                                         </td>
                                     </tr>
                                 <?php endforeach ?>

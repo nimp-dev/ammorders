@@ -2,16 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="37571492-ede6-4bfa-a2c8-3467452d1574" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/functions.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/Time_list.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/TablesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/TablesController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/access.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/access.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/error.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/error.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/layouts/main.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/layouts/main.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/rtl/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/rtl/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/Time_list.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/Time_list.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/tables/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/tables/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/js/scripts.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/scripts.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -167,7 +162,15 @@
       <workItem from="1612775952684" duration="28583000" />
       <workItem from="1612950275227" duration="89089000" />
       <workItem from="1613052844832" duration="18176000" />
-      <workItem from="1613399908560" duration="1620000" />
+      <workItem from="1613399908560" duration="1760000" />
+      <workItem from="1613401686431" duration="616000" />
+      <workItem from="1613457750479" duration="1566000" />
+      <workItem from="1613461809812" duration="1800000" />
+      <workItem from="1613463624424" duration="1462000" />
+      <workItem from="1613465521096" duration="1805000" />
+      <workItem from="1613467338169" duration="2145000" />
+      <workItem from="1613469494618" duration="676000" />
+      <workItem from="1613471620674" duration="620000" />
     </task>
     <servers />
   </component>
@@ -184,5 +187,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

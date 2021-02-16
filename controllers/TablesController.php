@@ -48,12 +48,16 @@ class TablesController extends \yii\web\Controller
     public function actionUpdate()
     {
         $id = Yii::$app->request->get('id');
+        $time = (int)Yii::$app->request->get('time');
+        $time = !$time ? 1 : $time;
         $idworker = Workers::findOne($id);
         if(empty($idworker)) return false;
         $session = Yii::$app->session;
         $session->open();
         $list = new Time_list();
-        $list->addToList($idworker);
+        $list->addToList($idworker, $time);
+            debug($session['Time_list']);
+        debug($session['Time_list.week_time']);
 
     }
 
