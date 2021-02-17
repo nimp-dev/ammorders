@@ -13,4 +13,8 @@ class Time_list extends ActiveRecord{
         $_SESSION['Time_list.week_time'] = isset($_SESSION['Time_list.week_time']) ? $_SESSION['Time_list.week_time']
             + $time : $time;
     }
+
+    public function recalc($id){
+        unset($_SESSION['Time_list'][$id]);
+    }
 }

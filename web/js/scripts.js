@@ -1,3 +1,8 @@
+// $('.add_time').on('onchange', function (e) {
+//     var id = $(this).data('id'),
+//         time = $('#time').val();
+// }
+
 
 $('.add-to-cart').on('click', function (e) {
     e.preventDefault();
@@ -20,19 +25,46 @@ $('.add-to-cart').on('click', function (e) {
     });
 });
 
+function clearCart(){
+    $.ajax({
+        url: '/tables/clear',
+        type: 'GET',
+        success: function(res){
+            if(!res) alert('Ошибка!');
+            $("#contenent").html(res);
+        },
+        error: function(){
+            alert('Error!');
+        }
+    });
+}
 
-
-$(document).ready(function(){
-
-    $('#btn1').click(function(){
+$('#contenent').on('click','.del-item',function (){
+        var id = $(this).data('id');
         $.ajax({
-            url: "/views/tables/time-modal",
-            cache: false,
-            success: function(html){
-                $("#contenent").html(html);
+            url: '/tables/del-item',
+            data: {id: id},
+            type: 'GET',
+            success: function(res){
+                if(!res) alert('Ошибка!');
+                $("#contenent").html(res);
+            },
+            error: function(){
+                alert('Error!');
             }
         });
     });
 
-
+$( document ).ready(function() {
+    $.ajax({
+        url: '/tables/show',
+        type: 'GET',
+        success: function(res){
+            if(!res) alert('Ошибка!');
+            $("#contenent").html(res);
+        },
+        error: function(){
+            alert('Error!');
+        }
+    });
 });

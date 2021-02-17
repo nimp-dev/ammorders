@@ -3,19 +3,19 @@
         <table class="table table-hover table-striped">
             <thead>
                 <tr>
-                    <th>id</th>
-                    <th>week_time</th>
-                    <th>name</th>
-                    <th>last_name</th>
+                    <th>Имя</th>
+                    <th>Фамилия</th>
+                    <th>Часы работы</th>
+                    <th><button type="button" class="btn btn-danger" onclick="clearCart()">Очистить</button></th>
                 </tr>
             </thead>
             <tbody>
                 <?php foreach ($session['Time_list'] as $id => $item) : ?>
                     <tr>
-                        <td><?=$item['id']?></td>
-                        <td><?=$item['week_time']?></td>
                         <td><?=$item['name']?></td>
                         <td><?=$item['last_name']?></td>
+                        <td><input type="text" class="add_time" data-id="<?= $id ?>"> </td>
+                        <td><i data-id="<?= $id ?>" class="fa fa-window-close del-item" aria-hidden="true"></i></td>
                     </tr>
                 <?php endforeach;?>
             </tbody>
@@ -23,5 +23,18 @@
     </div>
 
 <?php else: ?>
-    <h4>путсо</h4>
+    <div class="table-responsive">
+        <table class="table table-hover table-striped">
+            <thead>
+            <tr>
+                <th>Имя</th>
+                <th>Фамилия</th>
+                <th>Часы работы</th>
+                <th><button type="button" class="btn btn-danger" onclick="clearCart()">Очистить</button></th>
+            </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
 <?php endif;?>

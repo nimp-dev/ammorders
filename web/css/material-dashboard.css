@@ -19757,4 +19757,20 @@ Copyright (c) 2015 Daniel Eden
   }
 }
 
+.form-select{
+  width: 100%;
+  border: none;
+  /*border-color: #972fb0;*/
+  border-radius: 3px;
+  box-shadow: 0 4px 20px 0px rgb(0 0 0 / 14%), 0 7px 10px -5px rgb(156 39 176 / 40%);
+  text-align: center;
+  padding: 3px;
+}
+.add-to-cart{
+  padding: 3px;
+}
+.del-item{
+  color: #f44336;
+  cursor: pointer;
+}
 /*# sourceMappingURL=dashboard-free.css.map */

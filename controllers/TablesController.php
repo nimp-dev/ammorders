@@ -63,4 +63,29 @@ class TablesController extends \yii\web\Controller
 
     }
 
+    public function actionClear(){
+        $session = Yii::$app->session;
+        $session->open();
+        $session->remove('Time_list');
+        $this->layout = false;
+        return $this->render('time-modal',compact('session'));
+    }
+
+    public function actionDelItem(){
+        $id = Yii::$app->request->get('id');
+        $session = Yii::$app->session;
+        $session->open();
+        $list = new Time_list();
+        $list->recalc($id);
+        $this->layout = false;
+        return $this->render('time-modal',compact('session'));
+    }
+
+    public function actionShow(){
+        $session = Yii::$app->session;
+        $session->open();
+        $this->layout = false;
+        return $this->render('time-modal',compact('session'));
+    }
+
 }

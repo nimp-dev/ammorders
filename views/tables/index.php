@@ -163,54 +163,21 @@ use yii\helpers\Url;
                     </div>
 
                     <div class="tab-pane" id="createstory">
-                        <div class="table-responsive">
-                            <table class="table table-hover">
-                                <thead class="">
-                                <th>
-                                    Accept
-                                </th>
-                                <th>
-                                    Name
-                                </th>
-                                <th>
-                                    last name
-                                </th>
-                                <th>
-                                    Time
-                                </th>
-                                </thead>
-                                <tbody>
-                                <?php foreach ($workList as $key=> $wlist) :?>
-                                    <tr>
-                                        <td>
-                                            <div><a class="add-to-cart" href="<?= Url::to(['tables/update','id'=>$wlist['id'] ]) ?>" data-id="<?= $wlist['id'] ?>" >
+                            <select class="form-select" size="3" aria-label="size 3 select example">
+<!--                                <option selected>Open this select menu</option>-->
+                                <?php foreach($workList as $wlist) : ?>
+                                <option class="add-to-cart" href="<?= Url::to(['tables/update','id'=>$wlist['id'] ]) ?>" data-id="<?= $wlist['id'] ?>" value="1">
+                                    <?=$wlist['name']?> <?=$wlist['last_name']?> </option>
+                                <?php endforeach;?>
+                            </select>
+                        <div id="contenent">
 
-                                                    <input type="checkbox" />
-
-                                                </a></div>
-
-                                        </td>
-                                        <td>
-                                            <?= $wlist['name'] ?>
-                                        </td>
-                                        <td>
-                                            <?= $wlist['last_name'] ?>
-                                        </td>
-                                        <td>
-
-                                        </td>
-                                    </tr>
-                                <?php endforeach ?>
-                                </tbody>
-                            </table>
                         </div>
                     </div>
                 </div>
             </div>
           </div>
-                <div id="contenent">
 
-                </div>
 
         </div>
       </div>
