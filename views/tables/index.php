@@ -197,7 +197,6 @@ use yii\helpers\Url;
                                             <?= $wlist['last_name'] ?>
                                         </td>
                                         <td>
-                                            <input type="text" value="8" id="time"/>
 
                                         </td>
                                     </tr>
@@ -209,6 +208,10 @@ use yii\helpers\Url;
                 </div>
             </div>
           </div>
+                <div id="contenent">
+
+                </div>
+
         </div>
       </div>
     </div>

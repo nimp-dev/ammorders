@@ -10,11 +10,29 @@ $('.add-to-cart').on('click', function (e) {
         type: 'GET',
         success: function(res){
             //if(!res) alert('Ощибка(');
-             console.log(res);
+            // console.log(res);
+            $("#contenent").html(res);
             //showCart(res);
         },
         error: function(){
             alert('Error)');
         }
     });
+});
+
+
+
+$(document).ready(function(){
+
+    $('#btn1').click(function(){
+        $.ajax({
+            url: "/views/tables/time-modal",
+            cache: false,
+            success: function(html){
+                $("#contenent").html(html);
+            }
+        });
+    });
+
+
 });
