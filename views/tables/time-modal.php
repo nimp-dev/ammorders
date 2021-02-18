@@ -5,7 +5,7 @@
                 <tr>
                     <th>Имя</th>
                     <th>Фамилия</th>
-                    <th>Часы работы</th>
+                    <th>Время</th>
                     <th><button type="button" class="btn btn-danger" onclick="clearCart()">Очистить</button></th>
                 </tr>
             </thead>
@@ -14,7 +14,7 @@
                     <tr>
                         <td><?=$item['name']?></td>
                         <td><?=$item['last_name']?></td>
-                        <td><input type="text" class="add_time" data-id="<?= $id ?>"> </td>
+                        <td><input style="padding: 2px" size="3" type="number" class="add_time input-duration" name="<?= $id ?>" data-id="<?= $id ?>"> </td>
                         <td><i data-id="<?= $id ?>" class="fa fa-window-close del-item" aria-hidden="true"></i></td>
                     </tr>
                 <?php endforeach;?>
@@ -29,7 +29,7 @@
             <tr>
                 <th>Имя</th>
                 <th>Фамилия</th>
-                <th>Часы работы</th>
+                <th>Время</th>
                 <th><button type="button" class="btn btn-danger" onclick="clearCart()">Очистить</button></th>
             </tr>
             </thead>

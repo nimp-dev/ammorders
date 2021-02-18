@@ -3,12 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="37571492-ede6-4bfa-a2c8-3467452d1574" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/TablesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/TablesController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/access.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/access.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/Time_list.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/Time_list.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/tables/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/tables/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/tables/time-modal.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/tables/time-modal.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/css/material-dashboard.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/material-dashboard.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/js/scripts.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/scripts.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -196,7 +192,12 @@
       <workItem from="1613567081003" duration="1798000" />
       <workItem from="1613568889413" duration="1813000" />
       <workItem from="1613570714268" duration="1627000" />
-      <workItem from="1613572525795" duration="1184000" />
+      <workItem from="1613572525795" duration="1800000" />
+      <workItem from="1613631535525" duration="610000" />
+      <workItem from="1613636613941" duration="1797000" />
+      <workItem from="1613638421674" duration="1798000" />
+      <workItem from="1613640229374" duration="1808000" />
+      <workItem from="1613642055793" duration="1424000" />
     </task>
     <servers />
   </component>

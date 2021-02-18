@@ -1,6 +1,7 @@
-// $('.add_time').on('onchange', function (e) {
+// $('#contenent').on('onchange','.add_time' function () {
 //     var id = $(this).data('id'),
 //         time = $('#time').val();
+//     alert(this.value);
 // }
 
 
@@ -67,4 +68,11 @@ $( document ).ready(function() {
             alert('Error!');
         }
     });
+});
+
+$('#contenent').on( 'change','.add_time', function() {
+    var id = $(this).data('id'),
+    time = $(this).val();
+    alert(time);
+
 });
