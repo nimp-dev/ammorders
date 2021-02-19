@@ -5,6 +5,10 @@
       <sourceFolder url="file://$MODULE_DIR$/tests" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/yiisoft/yii2-bootstrap4" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/npm-asset/bootstrap" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/kartik-v/yii2-widget-datetimepicker" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/kartik-v/yii2-krajee-base" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/bower-asset/jquery-ui" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/yiisoft/yii2-jui" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

@@ -73,6 +73,19 @@ $( document ).ready(function() {
 $('#contenent').on( 'change','.add_time', function() {
     var id = $(this).data('id'),
     time = $(this).val();
-    alert(time);
+    $.ajax({
+        url: '/tables/time',
+        data: {id: id, time: time},
+        type: 'GET',
+        success: function(res){
+            //if(!res) alert('Ощибка(');
+            // console.log(res);
+            $("#contenent").html(res);
+            //showCart(res);
+        },
+        error: function(){
+            alert('Error)');
+        }
+    });
 
 });

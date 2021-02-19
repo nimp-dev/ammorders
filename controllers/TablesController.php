@@ -11,6 +11,8 @@
 namespace app\controllers;
 use app\models\Workers;
 use app\models\Time_list;
+use app\models\Clm_list_time;
+use app\models\Time_model;
 use Yii;
 
 
@@ -49,7 +51,7 @@ class TablesController extends \yii\web\Controller
     {
         $id = Yii::$app->request->get('id');
         $time = (int)Yii::$app->request->get('time');
-        $time = !$time ? 1 : $time;
+        $time = !$time ? null : $time;
         $idworker = Workers::findOne($id);
         if(empty($idworker)) return false;
         $session = Yii::$app->session;
@@ -86,6 +88,45 @@ class TablesController extends \yii\web\Controller
         $session->open();
         $this->layout = false;
         return $this->render('time-modal',compact('session'));
+    }
+
+    public function actionTime(){
+        $id = Yii::$app->request->get('id');
+        $time = Yii::$app->request->get('time');
+        $session = Yii::$app->session;
+        $session->open();
+        $list = new Time_list();
+        $list->addtime($id,$time);
+        $this->layout = false;
+        return $this->render('time-modal',compact('session'));
+    }
+
+    public function actionSafe(){
+//        $this->layout=false;
+        $session =Yii::$app->session;
+        $session->open();
+        $time = new Time_model();
+
+        if ($time->load(Yii::$app->request->post()) && $time->validate()) {
+            $this->saveWorkerTime($session['Time_list'],$time->data);
+            $session->remove('Time_list');
+            return $this->redirect(['tables/index']);
+        }
+
+        return $this->render('safe', compact('time'));
+    }
+
+    protected function saveWorkerTime($items, $data){
+        foreach ($items as $id => $item) {
+            $worker = new Clm_list_time();
+            $worker->id_worker = $item['id'];
+            $worker->data = $data;
+            $worker->name = $item['name'];
+            $worker->last_name = $item['last_name'];
+            $worker->day_time = $item['week_time'];
+            $worker->save();
+        }
+
     }
 
 }

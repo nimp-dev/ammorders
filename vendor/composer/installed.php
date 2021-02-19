@@ -1,12 +1,12 @@
 <?php return array (
   'root' => 
   array (
-    'pretty_version' => '1.0.0+no-version-set',
-    'version' => '1.0.0.0',
+    'pretty_version' => 'dev-master',
+    'version' => 'dev-master',
     'aliases' => 
     array (
     ),
-    'reference' => NULL,
+    'reference' => '2d49e3fe07f4e7b8323aaa8782861fc540b163a6',
     'name' => 'yiisoft/yii2-app-basic',
   ),
   'versions' => 
@@ -46,6 +46,15 @@
       array (
       ),
       'reference' => '4c0e4becb8263bb5b3e6dadc448d8e7305ef8215',
+    ),
+    'bower-asset/jquery-ui' => 
+    array (
+      'pretty_version' => '1.12.1',
+      'version' => '1.12.1.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '44ecf3794cc56b65954cc19737234a3119d036cc',
     ),
     'bower-asset/punycode' => 
     array (
@@ -217,6 +226,24 @@
       array (
       ),
       'reference' => '53330f47520498c0ae1f61f7e2c90f55690c06a3',
+    ),
+    'kartik-v/yii2-krajee-base' => 
+    array (
+      'pretty_version' => 'v2.0.5',
+      'version' => '2.0.5.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '9ddb662bdf49fdb671a90853912a40418a26a0dd',
+    ),
+    'kartik-v/yii2-widget-datetimepicker' => 
+    array (
+      'pretty_version' => 'v1.4.9',
+      'version' => '1.4.9.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'dadf042cf13cce84a877dff5f1e6893538f370cf',
     ),
     'myclabs/deep-copy' => 
     array (
@@ -756,12 +783,12 @@
     ),
     'yiisoft/yii2-app-basic' => 
     array (
-      'pretty_version' => '1.0.0+no-version-set',
-      'version' => '1.0.0.0',
+      'pretty_version' => 'dev-master',
+      'version' => 'dev-master',
       'aliases' => 
       array (
       ),
-      'reference' => NULL,
+      'reference' => '2d49e3fe07f4e7b8323aaa8782861fc540b163a6',
     ),
     'yiisoft/yii2-bootstrap' => 
     array (
@@ -816,6 +843,15 @@
       array (
       ),
       'reference' => 'd879cb186361fbc6f71a2d994d580b5a071a5642',
+    ),
+    'yiisoft/yii2-jui' => 
+    array (
+      'pretty_version' => '2.0.7',
+      'version' => '2.0.7.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'ce45c16d4fbbe7d1c516d8d0e8311e07f6138eed',
     ),
     'yiisoft/yii2-swiftmailer' => 
     array (
