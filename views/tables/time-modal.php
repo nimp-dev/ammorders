@@ -21,10 +21,6 @@
                 <?php endforeach;?>
             </tbody>
         </table>
-        <input type="date" id="davaToday"><br>
-        <script>
-            document.getElementById('davaToday').valueAsDate = new Date();
-        </script>
         <button type="button" class="btn btn-danger" onclick="clearCart()">Очистить</button>
         <a href="<?= Url::to(['tables/safe']) ?>" class="btn btn-success">Сохранить</a>
     </div>

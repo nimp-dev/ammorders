@@ -2,6 +2,9 @@
 use yii\widgets\ActiveForm;
 use yii\helpers\Html;
 use yii\helpers\Url;
+use common\models\HistoryBalance;
+use yii\grid\GridView;
+use yii\helpers\ArrayHelper;
 ?>
 <script src="https://unpkg.com/vue"></script>
 <div class="content">
@@ -21,121 +24,40 @@ use yii\helpers\Url;
                       ID
                     </th>
                     <th>
-                      Name
+                      Имя
                     </th>
                     <th>
-                      Country
+                      Фамилия
                     </th>
                     <th>
-                      City
+                      Телефон
                     </th>
                     <th>
-                      Salary
+                      Сумма
                     </th>
                   </thead>
                   <tbody>
-                    <tr>
+                    
+                      <?php foreach($workList as $wlist) : ?>
+                    <tr>  
                       <td>
-                        1
+                        <?=$wlist['id']?>
                       </td>
                       <td>
-                        Dakota Rice
+                       <?=$wlist['name']?>
                       </td>
                       <td>
-                        Niger
+                        <?=$wlist['last_name']?>
                       </td>
                       <td>
-                        Oud-Turnhout
+                        <?=$wlist['phone']?>
                       </td>
                       <td class="text-primary">
-                        $36,738
+                        <?=$wlist['week_time']?>
                       </td>
                     </tr>
-                    <tr>
-                      <td>
-                        2
-                      </td>
-                      <td>
-                        Minerva Hooper
-                      </td>
-                      <td>
-                        Curaçao
-                      </td>
-                      <td>
-                        Sinaai-Waas
-                      </td>
-                      <td class="text-primary">
-                        $23,789
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        3
-                      </td>
-                      <td>
-                        Sage Rodriguez
-                      </td>
-                      <td>
-                        Netherlands
-                      </td>
-                      <td>
-                        Baileux
-                      </td>
-                      <td class="text-primary">
-                        $56,142
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        4
-                      </td>
-                      <td>
-                        Philip Chaney
-                      </td>
-                      <td>
-                        Korea, South
-                      </td>
-                      <td>
-                        Overland Park
-                      </td>
-                      <td class="text-primary">
-                        $38,735
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        5
-                      </td>
-                      <td>
-                        Doris Greene
-                      </td>
-                      <td>
-                        Malawi
-                      </td>
-                      <td>
-                        Feldkirchen in Kärnten
-                      </td>
-                      <td class="text-primary">
-                        $63,542
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        6
-                      </td>
-                      <td>
-                        Mason Porter
-                      </td>
-                      <td>
-                        Chile
-                      </td>
-                      <td>
-                        Gloucester
-                      </td>
-                      <td class="text-primary">
-                        $78,615
-                      </td>
-                    </tr>
+                      <?php endforeach;?>
+                    
                   </tbody>
                 </table>
               </div>
@@ -159,17 +81,64 @@ use yii\helpers\Url;
             <div class="card-body">
                 <div class="tab-content">
                     <div class="tab-pane active show" id="story">
-                        <p>thi is story</p>
-                    </div>
+                            <!-- <div class="table-responsive">
+                              <table class="table table-hover table-striped"> -->
+                                  <!-- <thead>
+                                      <tr>
+                                          <th>data</th>
+                                          <th>Имя</th>
+                                          <th>Фамилия</th>
+                                          <th>Время</th>
+                                          <th></th>
+                                      </tr>
+                                  </thead> -->
+                                     <?php echo GridView::widget([
+                                            'dataProvider' => $dataProvider,
+                                            'columns' => [
+                                                'data',
+                                                'name',
+                                                'last_name',
+                                                'day_time',
+                                                // ['class' => 'yii\grid\ActionColumn'],
+                                            ]
+                                        ]); ?>
+                                <!--   <tbody> -->
 
+                                    
+                                  <!-- </tbody> -->
+                              <!-- </table> -->
+                            <!-- </div> -->
+                    </div>
+                    
                     <div class="tab-pane" id="createstory">
-                            <select class="form-select" size="3" aria-label="size 3 select example">
-<!--                                <option selected>Open this select menu</option>-->
-                                <?php foreach($workList as $wlist) : ?>
-                                <option class="add-to-cart" href="<?= Url::to(['tables/update','id'=>$wlist['id'] ]) ?>" data-id="<?= $wlist['id'] ?>" value="1">
-                                    <?=$wlist['name']?> <?=$wlist['last_name']?> </option>
-                                <?php endforeach;?>
-                            </select>
+                            <!-- Button trigger modal -->
+                                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
+                                    Создать дневной лист
+                                  </button>
+
+                                  <!-- Modal -->
+                                  <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                      <div class="modal-content">
+                                        <div class="modal-header">
+                                          <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                          </button>
+                                        </div>
+                                        <div class="modal-body">
+                                          <?php foreach($workList as $wlist) : ?>
+                                            <button class="add-to-cart btn btn-success" href="<?= Url::to(['tables/update','id'=>$wlist['id'] ]) ?>" data-id="<?= $wlist['id'] ?>">
+                                              <?=$wlist['name']?> <?=$wlist['last_name']?></button>
+                                          <?php endforeach;?> 
+                                        </div>
+                                        <div class="modal-footer">
+                                          <button type="button" data-dismiss="modal" aria-label="Close" class="btn btn-primary close">ok</button>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                            <!-- Button trigger modal -->
                         <div id="contenent">
 
                         </div>

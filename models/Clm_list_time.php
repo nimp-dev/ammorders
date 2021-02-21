@@ -19,8 +19,9 @@ class Clm_list_time extends ActiveRecord {
     {
         return [
             'name' => 'Имя',
-            'last_name' => 'Телефон',
+            'last_name' => 'Фамилия',
             'data' => 'Дата',
+            'day_time' => 'Время',
         ];
     }
 
