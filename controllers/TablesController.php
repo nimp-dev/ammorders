@@ -13,6 +13,7 @@ use app\models\Workers;
 use app\models\Time_list;
 use app\models\Clm_list_time;
 use app\models\Time_model;
+use app\models\List_time_search;
 use yii\data\ActiveDataProvider;
 use Yii;
 
@@ -44,23 +45,25 @@ class TablesController extends \yii\web\Controller
     public function actionIndex()
     {
 
-        $dataProvider = new ActiveDataProvider([
-                'query' => Clm_list_time::find(),
-                'pagination' => [
-                    'pagesize' => 5,
-                    ],
-                'sort' => [
-                'defaultOrder' => [
-                    'data' => SORT_DESC,
-                     ],
-                ],
-            ]);
+//        $dataProvider = new ActiveDataProvider([
+//                'query' => Clm_list_time::find(),
+//                'pagination' => [
+//                    'pagesize' => 5,
+//                    ],
+//                'sort' => [
+//                'defaultOrder' => [
+//                    'data' => SORT_DESC,
+//                     ],
+//                ],
+//            ]);
+        $searchModel = new List_time_search();
+        $dataProvider = $searchModel->search(Yii::$app->request->get());
         $workList = Workers::Find()->all();
         $list_time = Clm_list_time::Find()->all();
 
 
 
-        return $this->render('index',['workList'=>$workList, 'list_time'=>$list_time,'dataProvider'=>$dataProvider]);
+        return $this->render('index',['workList'=>$workList, 'list_time'=>$list_time,'dataProvider'=>$dataProvider,'searchModel' => $searchModel]);
     }
 
     public function actionUpdate()

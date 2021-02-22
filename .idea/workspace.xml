@@ -2,27 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="37571492-ede6-4bfa-a2c8-3467452d1574" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/models/Clm_list_time.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/Time_model.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/tables/safe.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/ammorders.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ammorders.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/TablesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/TablesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/access.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/access.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/Time_list.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/Time_list.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/InstalledVersions.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/InstalledVersions.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_files.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_files.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/installed.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/installed.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/installed.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/installed.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/yiisoft/extensions.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/yiisoft/extensions.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/tables/time-modal.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/tables/time-modal.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/css/material-dashboard.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/material-dashboard.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/js/scripts.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/scripts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/List_time_search.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/List_time_search.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/tables/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/tables/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -231,6 +214,9 @@
       <workItem from="1613737662425" duration="1799000" />
       <workItem from="1613739476452" duration="1802000" />
       <workItem from="1613741338642" duration="1073000" />
+      <workItem from="1613975903859" duration="1118000" />
+      <workItem from="1614000067420" duration="1797000" />
+      <workItem from="1614001877033" duration="48000" />
     </task>
     <servers />
   </component>

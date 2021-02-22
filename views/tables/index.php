@@ -2,7 +2,7 @@
 use yii\widgets\ActiveForm;
 use yii\helpers\Html;
 use yii\helpers\Url;
-use common\models\HistoryBalance;
+//use common\models\HistoryBalance;
 use yii\grid\GridView;
 use yii\helpers\ArrayHelper;
 ?>
@@ -10,60 +10,60 @@ use yii\helpers\ArrayHelper;
 <div class="content">
     <div class="container-fluid">
       <div class="row">
-        <div class="col-md-12">
-          <div class="card">
-            <div class="card-header card-header-primary">
-              <h4 class="card-title ">Simple Table</h4>
-              <p class="card-category"> Here is a subtitle for this table</p>
-            </div>
-            <div class="card-body">
-              <div class="table-responsive">
-                <table class="table">
-                  <thead class=" text-primary">
-                    <th>
-                      ID
-                    </th>
-                    <th>
-                      Имя
-                    </th>
-                    <th>
-                      Фамилия
-                    </th>
-                    <th>
-                      Телефон
-                    </th>
-                    <th>
-                      Сумма
-                    </th>
-                  </thead>
-                  <tbody>
-                    
-                      <?php foreach($workList as $wlist) : ?>
-                    <tr>  
-                      <td>
-                        <?=$wlist['id']?>
-                      </td>
-                      <td>
-                       <?=$wlist['name']?>
-                      </td>
-                      <td>
-                        <?=$wlist['last_name']?>
-                      </td>
-                      <td>
-                        <?=$wlist['phone']?>
-                      </td>
-                      <td class="text-primary">
-                        <?=$wlist['week_time']?>
-                      </td>
-                    </tr>
-                      <?php endforeach;?>
-                    
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
-        </div>
+<!--        <div class="col-md-12">-->
+<!--          <div class="card">-->
+<!--            <div class="card-header card-header-primary">-->
+<!--              <h4 class="card-title ">Simple Table</h4>-->
+<!--              <p class="card-category"> Here is a subtitle for this table</p>-->
+<!--            </div>-->
+<!--            <div class="card-body">-->
+<!--              <div class="table-responsive">-->
+<!--                <table class="table">-->
+<!--                  <thead class=" text-primary">-->
+<!--                    <th>-->
+<!--                      ID-->
+<!--                    </th>-->
+<!--                    <th>-->
+<!--                      Имя-->
+<!--                    </th>-->
+<!--                    <th>-->
+<!--                      Фамилия-->
+<!--                    </th>-->
+<!--                    <th>-->
+<!--                      Телефон-->
+<!--                    </th>-->
+<!--                    <th>-->
+<!--                      Сумма-->
+<!--                    </th>-->
+<!--                  </thead>-->
+<!--                  <tbody>-->
+<!--                    -->
+<!--                      --><?php //foreach($workList as $wlist) : ?>
+<!--                    <tr>  -->
+<!--                      <td>-->
+<!--                        --><?//=$wlist['id']?>
+<!--                      </td>-->
+<!--                      <td>-->
+<!--                       --><?//=$wlist['name']?>
+<!--                      </td>-->
+<!--                      <td>-->
+<!--                        --><?//=$wlist['last_name']?>
+<!--                      </td>-->
+<!--                      <td>-->
+<!--                        --><?//=$wlist['phone']?>
+<!--                      </td>-->
+<!--                      <td class="text-primary">-->
+<!--                        --><?//=$wlist['week_time']?>
+<!--                      </td>-->
+<!--                    </tr>-->
+<!--                      --><?php //endforeach;?>
+<!--                    -->
+<!--                  </tbody>-->
+<!--                </table>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
         <div class="col-md-12">
           <div class="card card-plain">
             <div class="card-header card-header-primary">
@@ -94,6 +94,7 @@ use yii\helpers\ArrayHelper;
                                   </thead> -->
                                      <?php echo GridView::widget([
                                             'dataProvider' => $dataProvider,
+                                            'filterModel' => $searchModel,
                                             'columns' => [
                                                 'data',
                                                 'name',
