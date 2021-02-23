@@ -52,8 +52,8 @@ class SiteController extends \yii\web\Controller
 	    $this->layout = '@app/views/layouts/admin';
 
         $model = new UserLoginForm();
-        $model->email = 'Admin@gmail.com';
-	    $model->password = 'Admin123';
+        $model->email = 'admin@gmail.com';
+	    $model->password = 'admin123';
 
         if (\Yii::$app->user->isGuest == false && \Yii::$app->user->identity->email != false) {
             return $this->redirect(['dashboard/index']);

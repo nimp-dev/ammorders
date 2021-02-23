@@ -2,20 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="37571492-ede6-4bfa-a2c8-3467452d1574" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/SiteController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/SiteController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/TablesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/TablesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/access.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/access.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/dashboard/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/dashboard/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/layouts/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/layouts/admin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/layouts/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/layouts/footer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/layouts/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/layouts/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/layouts/left.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/layouts/left.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/layouts/main.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/layouts/main.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/map/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/map/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/site/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/site/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/tables/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/tables/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/typography/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/typography/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -240,6 +227,7 @@
       <workItem from="1614076828950" duration="41000" />
       <workItem from="1614081950564" duration="1681000" />
       <workItem from="1614085326568" duration="875000" />
+      <workItem from="1614090722261" duration="100000" />
     </task>
     <servers />
   </component>
