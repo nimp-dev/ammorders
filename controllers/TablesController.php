@@ -60,12 +60,16 @@ class TablesController extends \yii\web\Controller
         $dataProvider = $searchModel->search(Yii::$app->request->get());
         $workList = Workers::Find()->all();
         $list_time = Clm_list_time::Find()->all();
-        $getTimeList = Clm_list_time::getTimeList();
 
 
 
         return $this->render('index',['workList'=>$workList, 'list_time'=>$list_time,
-                                'dataProvider'=>$dataProvider,'searchModel' => $searchModel,'getTimeList' => $getTimeList]);
+                                'dataProvider'=>$dataProvider,'searchModel' => $searchModel]);
+    }
+
+    public function actionCash(){
+        $getTimeList = Clm_list_time::getTimeList();
+        return $this->render('cash',['getTimeList' => $getTimeList]);
     }
 
     public function actionUpdate()

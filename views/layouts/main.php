@@ -93,10 +93,10 @@ $this->beginPage();
     </div>
 </div>
 
-<?= $this->render(
-	'plugin.php'
-)
-?>
+<?//= $this->render(
+//	'plugin.php'
+//)
+//?>
 <!--   Core JS Files   -->
   <script src="<?= \Yii::getAlias('@web/js/core/jquery.min.js');?>"></script>
   <script src="<?= \Yii::getAlias('@web/js/core/popper.min.js');?>"></script>

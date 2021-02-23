@@ -5,65 +5,12 @@ use yii\helpers\Url;
 //use common\models\HistoryBalance;
 use yii\grid\GridView;
 use yii\helpers\ArrayHelper;
+use yii\jui\DatePicker;
 ?>
 <script src="https://unpkg.com/vue"></script>
 <div class="content">
     <div class="container-fluid">
       <div class="row">
-        <div class="col-md-12">
-          <div class="card">
-            <div class="card-header card-header-primary">
-              <h4 class="card-title ">Simple Table</h4>
-              <p class="card-category"> Here is a subtitle for this table</p>
-            </div>
-            <div class="card-body">
-              <div class="table-responsive">
-                <table class="table">
-                  <thead class=" text-primary">
-                    <th>
-                      ID
-                    </th>
-                    <th>
-                      Имя
-                    </th>
-                    <th>
-                      Фамилия
-                    </th>
-                    <th>
-                      Часы
-                    </th>
-                    <th>
-                      Сумма
-                    </th>
-                  </thead>
-                  <tbody>
-
-                      <?php foreach($getTimeList as $TimeList) : ?>
-                    <tr>
-                      <td>
-                        <?=$TimeList['id_worker']?>
-                      </td>
-                      <td>
-                       <?=$TimeList['name']?>
-                      </td>
-                      <td>
-                        <?=$TimeList['last_name']?>
-                      </td>
-                      <td>
-                        <?=$TimeList['work_time']?>
-                      </td>
-                      <td class="text-primary">
-                        <?=$TimeList['money']?>
-                      </td>
-                    </tr>
-                      <?php endforeach;?>
-
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
-        </div>
         <div class="col-md-12">
           <div class="card card-plain">
             <div class="card-header card-header-primary">
@@ -96,7 +43,31 @@ use yii\helpers\ArrayHelper;
                                             'dataProvider' => $dataProvider,
                                             'filterModel' => $searchModel,
                                             'columns' => [
-                                                'data',
+//                                                'data',
+                                            ['attribute' => 'data',
+                                                'value' => function($model) {
+                                                    return date('d.m.Y',strtotime($model->data));
+                                                },
+                                                'filter' => DatePicker::widget([
+                                                    'model' => $searchModel,
+                                                    'attribute' => 'data',
+                                                    'options' => [
+                                                        'class'=> 'form-control',
+                                                        'autocomplete'=>'off'
+                                                    ],
+                                                    'clientOptions' => [
+                                                        'changeMonth' => true,
+                                                        'changeYear' => true,
+                                                        'yearRange' => '2015:2050',
+                                                        //'showOn' => 'button',
+                                                        //'buttonText' => 'Выбрать дату',
+                                                        //'buttonImageOnly' => true,
+                                                        //'buttonImage' => 'images/calendar.gif'
+                                                    ],
+                                                    'dateFormat' => 'php:d.m.Y'
+                                                ]),
+
+                                            ],
                                                 'name',
                                                 'last_name',
                                                 'day_time',

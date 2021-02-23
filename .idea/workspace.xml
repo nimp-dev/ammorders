@@ -3,9 +3,19 @@
   <component name="ChangeListManager">
     <list default="true" id="37571492-ede6-4bfa-a2c8-3467452d1574" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/SiteController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/SiteController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/TablesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/TablesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/Clm_list_time.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/Clm_list_time.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/access.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/access.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/dashboard/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/dashboard/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/layouts/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/layouts/admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/layouts/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/layouts/footer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/layouts/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/layouts/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/layouts/left.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/layouts/left.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/layouts/main.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/layouts/main.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/map/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/map/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/site/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/site/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/tables/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/tables/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/typography/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/typography/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -217,7 +227,19 @@
       <workItem from="1613975903859" duration="1118000" />
       <workItem from="1614000067420" duration="1797000" />
       <workItem from="1614001877033" duration="1161000" />
-      <workItem from="1614003695519" duration="623000" />
+      <workItem from="1614003695519" duration="1458000" />
+      <workItem from="1614005506881" duration="230000" />
+      <workItem from="1614005754838" duration="762000" />
+      <workItem from="1614062404889" duration="1797000" />
+      <workItem from="1614064233347" duration="1691000" />
+      <workItem from="1614066046902" duration="1946000" />
+      <workItem from="1614068134981" duration="1798000" />
+      <workItem from="1614069945183" duration="1804000" />
+      <workItem from="1614071821550" duration="2289000" />
+      <workItem from="1614074663629" duration="1407000" />
+      <workItem from="1614076828950" duration="41000" />
+      <workItem from="1614081950564" duration="1681000" />
+      <workItem from="1614085326568" duration="875000" />
     </task>
     <servers />
   </component>

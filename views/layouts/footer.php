@@ -14,17 +14,17 @@
       <nav class="float-left">
         <ul>
           <li>
-            <a href="https://www.coderseden.com">
+            <a href="#">
               CodersEden
             </a>
           </li>
           <li>
-            <a href="https://www.coderseden.com/page/terms-and-conditions">
+            <a href="#">
               Terms
             </a>
           </li>
           <li>
-            <a href="https://www.coderseden.com/blog">
+            <a href="#">
               Blog
             </a>
           </li>
@@ -34,8 +34,7 @@
         &copy;
         <script>
           document.write(new Date().getFullYear())
-        </script>, made with <i class="material-icons">favorite</i> by
-        <a href="https://www.coderseden.com" target="_blank">CodersEden</a> and <a href="https://www.creative-tim.com" target="_blank">Creative Tim</a> for a better web.
+        </script> AmmOrders
       </div>
     </div>
 </footer>

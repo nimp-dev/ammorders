@@ -36,7 +36,7 @@ use yii\bootstrap4\ActiveForm;
                 </div>
             </div>
               <div class="card-body">
-                  <p class="card-description text-center">Or Sign in with  <strong>hello@coderseden.com</strong>  and the password <strong>admin123</strong> </p>
+                  <p class="card-description text-center">Временный логин <strong>admin@gmail.com</strong>  и временный пароль <strong>admin123</strong> </p>
                 <div class="form-group has-default">
                 <div class="input-group">
                   <div class="input-group-prepend">
