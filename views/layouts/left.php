@@ -69,6 +69,13 @@
 <!--          tables    end    -->
 
           <li class="nav-item ">
+            <a class="nav-link" href="<?=\yii\helpers\Url::to(['/tables/employess']);?>">
+                <i><img style="width:25px" src="<?= \Yii::getAlias('@web/img/team.svg'); ?>"></i>
+              <p>Сотрудники</p>
+            </a>
+          </li>
+
+          <li class="nav-item ">
             <a class="nav-link" href="<?=\yii\helpers\Url::to(['/typography']);?>">
                 <i><img style="width:25px" src="<?= \Yii::getAlias('@web/img/clipboard.svg'); ?>"></i>
               <p>Заказы</p>

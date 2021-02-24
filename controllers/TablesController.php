@@ -9,14 +9,16 @@
  * @since      1.0
  */
 namespace app\controllers;
+use app\models\User;
 use app\models\Workers;
 use app\models\Time_list;
 use app\models\Clm_list_time;
 use app\models\Time_model;
 use app\models\List_time_search;
+use app\models\WorkersSearch;
 use yii\data\ActiveDataProvider;
 use Yii;
-
+use yii\web\NotFoundHttpException;
 
 
 /**
@@ -153,5 +155,82 @@ class TablesController extends \yii\web\Controller
         }
 
     }
+
+    public function actionEmployess(){
+        $searchModel = new WorkersSearch();
+        $dataProvider = $searchModel->search(Yii::$app->request->get());
+        $dataProvider->pagination->pageSize=10;
+        return $this->render('employess',[
+            'searchModel' => $searchModel,
+            'dataProvider' => $dataProvider,
+        ]);
+    }
+
+    public function actionCreate()
+    {
+        $model = new Workers([
+            'scenario' => Workers::SCENARIO_CREATE
+        ]);
+
+        \Yii::$app->view->title = \Yii::t('app', 'Create User');
+
+        if ($model->load(\Yii::$app->getRequest()->post()) && $model->save()) {
+            return $this->redirect(['employess']);
+        } else {
+            return $this->render('form', [
+                'action'=> 'create',
+                'model' => $model,
+            ]);
+        }
+    }
+
+    public function actionView($id)
+    {
+        $model = $this->findModel($id);
+
+        \Yii::$app->view->title = \Yii::t('app', 'Workers {userName}', ['userName'=>$model->fullName]);
+
+        return $this->render('view', [
+            'model' => $model,
+        ]);
+    }
+
+    public function actionDelete($id)
+    {
+        $model = $this->findModel($id);
+
+        $model->delete();
+
+        return $this->redirect(['employess']);
+    }
+
+
+    public function actionUpdateus($id)
+    {
+        $model = $this->findModel($id);
+//        $user = \Yii::$app->getRequest()->post('User');
+
+        if ($model->load(\Yii::$app->getRequest()->post()) && $model->save()) {
+            return $this->redirect(['view', 'id' => $model->id]);
+        } else {
+            \Yii::$app->view->title = \Yii::t('app', 'Workers {userName}', ['userName'=>$model->fullName]);
+
+            return $this->render('form', [
+                'action'=> 'update',
+                'model' => $model,
+            ]);
+        }
+    }
+
+
+
+    protected function findModel($id)
+    {
+        if (($model = Workers::findOne($id)) !== null) {
+            return $model;
+        }
+        throw new NotFoundHttpException('The requested page does not exist.');
+    }
+
 
 }

@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="37571492-ede6-4bfa-a2c8-3467452d1574" name="Default Changelist" comment="" />
+    <list default="true" id="37571492-ede6-4bfa-a2c8-3467452d1574" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/models/WorkersSearch.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/tables/employess.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/tables/form.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/tables/view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/TablesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/TablesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/access.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/access.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/error.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/error.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/Workers.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/Workers.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/layouts/left.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/layouts/left.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -225,7 +236,16 @@
       <workItem from="1614076828950" duration="41000" />
       <workItem from="1614081950564" duration="1681000" />
       <workItem from="1614085326568" duration="875000" />
-      <workItem from="1614090722261" duration="702000" />
+      <workItem from="1614090722261" duration="1300000" />
+      <workItem from="1614153668531" duration="1600000" />
+      <workItem from="1614155890249" duration="1749000" />
+      <workItem from="1614157696921" duration="1740000" />
+      <workItem from="1614159506387" duration="2981000" />
+      <workItem from="1614165670659" duration="1635000" />
+      <workItem from="1614167490055" duration="1800000" />
+      <workItem from="1614169368228" duration="2107000" />
+      <workItem from="1614171515482" duration="1797000" />
+      <workItem from="1614173673006" duration="1167000" />
     </task>
     <servers />
   </component>
