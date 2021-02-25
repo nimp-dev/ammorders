@@ -10,6 +10,8 @@
  */
 namespace app\controllers;
 
+use app\models\WorkersSearch;
+
 /**
  * Class TypographyController
  * @package app\controllers
@@ -35,6 +37,15 @@ class TypographyController extends \yii\web\Controller
 	 */
     public function actionIndex()
     {
+//        $searchModel = new WorkersSearch();
+//        $dataProvider = $searchModel->search(Yii::$app->request->get());
+//        $dataProvider->pagination->pageSize=10;
+//        return $this->render('employess',[
+//            'searchModel' => $searchModel,
+//            'dataProvider' => $dataProvider,
+//        ]);
         return $this->render('index', []);
     }
+
+
 }
