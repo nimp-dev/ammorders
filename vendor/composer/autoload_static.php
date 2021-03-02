@@ -44,6 +44,10 @@ class ComposerStaticInitf67f2484a8c82d41291ff23285a96998
         array (
             'phpDocumentor\\Reflection\\' => 25,
         ),
+        'l' => 
+        array (
+            'lhs\\Yii2SaveRelationsBehavior\\' => 30,
+        ),
         'k' => 
         array (
             'kartik\\datetime\\' => 16,
@@ -158,6 +162,10 @@ class ComposerStaticInitf67f2484a8c82d41291ff23285a96998
             0 => __DIR__ . '/..' . '/phpdocumentor/reflection-common/src',
             1 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
             2 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
+        ),
+        'lhs\\Yii2SaveRelationsBehavior\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/la-haute-societe/yii2-save-relations-behavior/src',
         ),
         'kartik\\datetime\\' => 
         array (

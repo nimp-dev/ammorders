@@ -2,9 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="37571492-ede6-4bfa-a2c8-3467452d1574" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/models/Orders.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/OrdersSearch.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/Orders_contact.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/Orders_count.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/Orders_details.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/typography/form.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/typography/view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/ammorders.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ammorders.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/TypographyController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/TypographyController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/access.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/access.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/InstalledVersions.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/InstalledVersions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/installed.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/installed.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/installed.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/installed.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/yiisoft/extensions.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/yiisoft/extensions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/typography/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/typography/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,6 +138,7 @@
       <path value="$PROJECT_DIR$/vendor/kartik-v/yii2-krajee-base" />
       <path value="$PROJECT_DIR$/vendor/bower-asset/jquery-ui" />
       <path value="$PROJECT_DIR$/vendor/yiisoft/yii2-jui" />
+      <path value="$PROJECT_DIR$/vendor/la-haute-societe/yii2-save-relations-behavior" />
     </include_path>
   </component>
   <component name="ProjectId" id="1oC1qh5upDQ6KaGNPUg6pTAFngO" />
@@ -240,7 +259,26 @@
       <workItem from="1614171515482" duration="1797000" />
       <workItem from="1614173673006" duration="1167000" />
       <workItem from="1614246821861" duration="1420000" />
-      <workItem from="1614258094533" duration="611000" />
+      <workItem from="1614258094533" duration="1199000" />
+      <workItem from="1614260917223" duration="1797000" />
+      <workItem from="1614262724762" duration="1798000" />
+      <workItem from="1614264533344" duration="56936000" />
+      <workItem from="1614328174508" duration="1820000" />
+      <workItem from="1614331392864" duration="1882000" />
+      <workItem from="1614333635360" duration="1125000" />
+      <workItem from="1614335895310" duration="777000" />
+      <workItem from="1614584435361" duration="1653000" />
+      <workItem from="1614586246990" duration="1590000" />
+      <workItem from="1614588809832" duration="604000" />
+      <workItem from="1614592132980" duration="756000" />
+      <workItem from="1614598154151" duration="68323000" />
+      <workItem from="1614666499563" duration="9392000" />
+      <workItem from="1614676639536" duration="1524000" />
+      <workItem from="1614678870354" duration="2355000" />
+      <workItem from="1614688859633" duration="2188000" />
+      <workItem from="1614691389229" duration="599000" />
+      <workItem from="1614694940683" duration="1790000" />
+      <workItem from="1614696748451" duration="434000" />
     </task>
     <servers />
   </component>

@@ -19,7 +19,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => '2d49e3fe07f4e7b8323aaa8782861fc540b163a6',
+    'reference' => 'faebb3efeae5336805e7aa480c4e8dfa15f8efc7',
     'name' => 'yiisoft/yii2-app-basic',
   ),
   'versions' => 
@@ -257,6 +257,15 @@ private static $installed = array (
       array (
       ),
       'reference' => 'dadf042cf13cce84a877dff5f1e6893538f370cf',
+    ),
+    'la-haute-societe/yii2-save-relations-behavior' => 
+    array (
+      'pretty_version' => '1.7.2',
+      'version' => '1.7.2.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '1fbe8d07430fddf58f44bdd554a181a4898d0f00',
     ),
     'myclabs/deep-copy' => 
     array (
@@ -801,7 +810,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => '2d49e3fe07f4e7b8323aaa8782861fc540b163a6',
+      'reference' => 'faebb3efeae5336805e7aa480c4e8dfa15f8efc7',
     ),
     'yiisoft/yii2-bootstrap' => 
     array (

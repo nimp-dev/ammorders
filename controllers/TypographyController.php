@@ -9,8 +9,16 @@
  * @since      1.0
  */
 namespace app\controllers;
-
-use app\models\WorkersSearch;
+use app\models;
+use app\models\Orders;
+use app\models\Orders_contact;
+use app\models\Orders_count;
+use app\models\Orders_details;
+use app\models\Workers;
+use app\models\OrdersSearch;
+use yii\data\ActiveDataProvider;
+use yii\web\NotFoundHttpException;
+use Yii;
 
 /**
  * Class TypographyController
@@ -37,15 +45,60 @@ class TypographyController extends \yii\web\Controller
 	 */
     public function actionIndex()
     {
-//        $searchModel = new WorkersSearch();
-//        $dataProvider = $searchModel->search(Yii::$app->request->get());
-//        $dataProvider->pagination->pageSize=10;
-//        return $this->render('employess',[
-//            'searchModel' => $searchModel,
-//            'dataProvider' => $dataProvider,
-//        ]);
-        return $this->render('index', []);
+        $searchModel = new OrdersSearch();
+        $dataProvider = $searchModel->search(Yii::$app->request->get());
+        $dataProvider->pagination->pageSize=10;
+        return $this->render('index',[
+            'searchModel' => $searchModel,
+            'dataProvider' => $dataProvider,
+        ]);
     }
+
+    public function actionView($id)
+    {
+        $id = Yii::$app->request->get('id');
+//        $model = $this->findModel($id);
+        $model = Orders::findOne($id);
+        $orders = Orders_count::findOne($id);
+
+//        \Yii::$app->view->title = \Yii::t('app', 'Orders {userName}', ['userName'=>$model->fullName]);
+
+        return $this->render('view', [
+            'model' => $model,
+            'orders' => $orders,
+        ]);
+    }
+
+    public function actionCreate()
+    {
+        $model = new Orders([
+            'scenario' => Orders::SCENARIO_CREATE
+        ]);
+
+        \Yii::$app->view->title = \Yii::t('app', 'Создать Ордер');
+
+        if ($model->load(\Yii::$app->getRequest()->post()) && $model->save()) {
+            return $this->redirect(['index']);
+        } else {
+            return $this->render('form', [
+                'action'=> 'create',
+                'model' => $model,
+            ]);
+        }
+    }
+
+
+
+
+    protected function findModel($id)
+    {
+        if (($model = Orders::findOne($id)) !== null) {
+            return $model;
+        }
+        throw new NotFoundHttpException('The requested page does not exist.');
+    }
+
+
 
 
 }
