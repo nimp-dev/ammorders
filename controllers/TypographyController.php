@@ -71,21 +71,26 @@ class TypographyController extends \yii\web\Controller
 
     public function actionCreate()
     {
-        $model = new Orders([
-            'scenario' => Orders::SCENARIO_CREATE
-        ]);
+        $model = new Orders();
+        $modelcount = new Orders_count();
 
         \Yii::$app->view->title = \Yii::t('app', 'Создать Ордер');
 
         if ($model->load(\Yii::$app->getRequest()->post()) && $model->save()) {
+            $modelcount->id_orders = $model->id;
+
+                if($modelcount->load(\Yii::$app->getRequest()->post()) && $modelcount->save()) 
+
             return $this->redirect(['index']);
         } else {
             return $this->render('form', [
                 'action'=> 'create',
                 'model' => $model,
+                'modelcount' => $modelcount,
             ]);
         }
     }
+
 
 
 

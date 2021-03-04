@@ -75,10 +75,48 @@ use yii\helpers\ArrayHelper;
                     </div>
                 </div>
             </div>
-            <div class="card-footer ml-auto mr-auto">
-                <?= Html::submitButton($model->isNewRecord ? \Yii::t('app', 'Create') : \Yii::t('app', 'Update'), ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
-            </div>
-            <?php ActiveForm::end(); ?>
+            
+           
         </div>
+
+        <div class="card ">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group bmd-form-group">
+                            <label for="<?=Html::getInputId($modelcount, 'price');?>" class="bmd-label-floating"><?=Html::activeLabel($modelcount,'price');?></label>
+                            <?= $form->field($modelcount, 'price')->textInput(['maxlength' => true])->label(false); ?>
+                            <span class="bmd-help"><?=Html::activeHint($modelcount,'price');?></span>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group bmd-form-group">
+                            <label for="<?=Html::getInputId($modelcount, 'prepay');?>" class="bmd-label-floating"><?=Html::activeLabel($modelcount,'prepay');?></label>
+                            <?= $form->field($modelcount, 'prepay')->textInput(['maxlength' => true])->label(false); ?>
+                            <span class="bmd-help"><?=Html::activeHint($modelcount,'prepay');?></span>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group bmd-form-group">
+                            <label for="<?=Html::getInputId($modelcount, 'start_at');?>" class="bmd-label-floating"><?=Html::activeLabel($modelcount,'start_at');?></label>
+                            <?= $form->field($modelcount, 'start_at')->textInput(['maxlength' => true])->label(false); ?>
+                            <span class="bmd-help"><?=Html::activeHint($modelcount,'start_at');?></span>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group bmd-form-group">
+                            <label for="<?=Html::getInputId($modelcount, 'end_at');?>" class="bmd-label-floating"><?=Html::activeLabel($modelcount,'end_at');?></label>
+                            <?= $form->field($modelcount, 'end_at')->textInput(['maxlength' => true])->label(false); ?>
+                            <span class="bmd-help"><?=Html::activeHint($modelcount,'end_at');?></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+            <div class="card-footer ml-auto mr-auto">
+                <?=  Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary'])  ?>
+            </div>
+         <?php ActiveForm::end(); ?>
+
     </div>
 </div>

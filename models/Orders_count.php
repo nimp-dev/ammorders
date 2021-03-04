@@ -7,6 +7,7 @@ use Yii;
 
 class Orders_count extends ActiveRecord
 {
+
     public static function tableName(){
         return 'orders_count';
     }
@@ -19,11 +20,10 @@ class Orders_count extends ActiveRecord
     {
         return [
             [['id','id_orders'], 'integer'],
-//            [['name'], 'required'],
-//            [['accept'], 'string'],
             [['price', 'prepay', 'start_at', 'end_at'], 'string', 'max' => 255],
         ];
     }
+
     public function attributeLabels()
     {
         return [

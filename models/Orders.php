@@ -1,8 +1,6 @@
 <?php
 namespace app\models;
 use yii\db\ActiveRecord;
-use yii\behaviors\TimestampBehavior;
-use lhs\Yii2SaveRelationsBehavior\SaveRelationsBehavior;
 use Yii;
 
 
@@ -10,26 +8,7 @@ use Yii;
 class Orders extends ActiveRecord
 {
 
-    const SCENARIO_CREATE = 'create';
 
-    public function behaviors() {
-            return [
-                TimestampBehavior::className(),
-                    'saveRelations' => [
-                    'class'     => SaveRelationsBehavior::className(),
-                    'relations' => [
-                        'orders_count',
-                        ],
-                    ],
-            ];
-        }
-
-    public function transactions()
-    {
-        return [
-            self::SCENARIO_DEFAULT => self::OP_ALL,
-        ];
-    }
 
 
     public static function tableName(){
@@ -50,10 +29,10 @@ class Orders extends ActiveRecord
             [['id'], 'integer'],
 //            [['name'], 'required'],
 //            [['accept'], 'string'],
-            [['name', 'last_name', 'start_at', 'end_at','status'], 'required', 'on' => self::SCENARIO_CREATE],
             [['name', 'last_name', 'start_at', 'end_at','status'], 'string', 'max' => 255],
         ];
     }
+
     public function attributeLabels()
     {
         return [
@@ -65,6 +44,7 @@ class Orders extends ActiveRecord
             'status' => 'статус'
         ];
     }
+
     public function getStatusesList()
     {
         return [
@@ -72,6 +52,7 @@ class Orders extends ActiveRecord
             'active'   => \Yii::t('app', 'Active'),
         ];
     }
+    
     public function getFullName()
     {
         return trim(sprintf('%s %s', $this->name, $this->last_name));
