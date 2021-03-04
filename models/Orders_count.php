@@ -28,7 +28,7 @@ class Orders_count extends ActiveRecord
     {
         return [
             'id' => '№',
-            'id_order' => '№ заказа',
+            'id_orders' => '№ заказа',
             'price' => 'цена',
             'prepay' => 'предоплата',
             'start_at' => 'дата начала',

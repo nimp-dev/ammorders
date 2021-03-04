@@ -48,16 +48,14 @@ use yii\helpers\ArrayHelper;
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-sm-12">
+                    <div class="col-sm-6">
                         <div class="form-group bmd-form-group">
                             <label for="<?=Html::getInputId($model, 'start_at');?>" class="bmd-label-floating"><?=Html::activeLabel($model,'start_at');?></label>
                             <?= $form->field($model, 'start_at')->textInput(['maxlength' => true])->label(false); ?>
                             <span class="bmd-help"><?=Html::activeHint($model,'start_at');?></span>
                         </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-12">
+                    <div class="col-sm-6">
                         <div class="form-group bmd-form-group">
                             <label for="<?=Html::getInputId($model, 'end_at');?>" class="bmd-label-floating"><?=Html::activeLabel($model,'end_at');?></label>
                             <?= $form->field($model, 'end_at')->textInput(['maxlength' => true])->label(false); ?>
@@ -112,7 +110,85 @@ use yii\helpers\ArrayHelper;
                     </div>
                 </div>
             </div>
+        </div>
+
+        <div class="card ">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group bmd-form-group">
+                            <label for="<?=Html::getInputId($modelcontact, 'phone');?>" class="bmd-label-floating"><?=Html::activeLabel($modelcontact,'phone');?></label>
+                            <?= $form->field($modelcontact, 'phone')->textInput(['maxlength' => true])->label(false); ?>
+                            <span class="bmd-help"><?=Html::activeHint($modelcontact,'phone');?></span>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group bmd-form-group">
+                            <label for="<?=Html::getInputId($modelcontact, 'addr');?>" class="bmd-label-floating"><?=Html::activeLabel($modelcontact,'addr');?></label>
+                            <?= $form->field($modelcontact, 'addr')->textInput(['maxlength' => true])->label(false); ?>
+                            <span class="bmd-help"><?=Html::activeHint($modelcontact,'addr');?></span>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group bmd-form-group">
+                            <label for="<?=Html::getInputId($modelcontact, 'name');?>" class="bmd-label-floating"><?=Html::activeLabel($modelcontact,'name');?></label>
+                            <?= $form->field($modelcontact, 'name')->textInput(['maxlength' => true])->label(false); ?>
+                            <span class="bmd-help"><?=Html::activeHint($modelcontact,'name');?></span>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group bmd-form-group">
+                            <label for="<?=Html::getInputId($modelcontact, 'last_name');?>" class="bmd-label-floating"><?=Html::activeLabel($modelcontact,'last_name');?></label>
+                            <?= $form->field($modelcontact, 'last_name')->textInput(['maxlength' => true])->label(false); ?>
+                            <span class="bmd-help"><?=Html::activeHint($modelcontact,'last_name');?></span>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group bmd-form-group">
+                            <label for="<?=Html::getInputId($modelcontact, 'patron_name');?>" class="bmd-label-floating"><?=Html::activeLabel($modelcontact,'patron_name');?></label>
+                            <?= $form->field($modelcontact, 'patron_name')->textInput(['maxlength' => true])->label(false); ?>
+                            <span class="bmd-help"><?=Html::activeHint($modelcontact,'patron_name');?></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card ">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group bmd-form-group">
+                            <label for="<?=Html::getInputId($modeldetails, 'item_name');?>" class="bmd-label-floating"><?=Html::activeLabel($modeldetails,'item_name');?></label>
+                            <?= $form->field($modeldetails, 'item_name')->textInput(['maxlength' => true])->label(false); ?>
+                            <span class="bmd-help"><?=Html::activeHint($modeldetails,'item_name');?></span>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group bmd-form-group">
+                            <label for="<?=Html::getInputId($modeldetails, 'profile');?>" class="bmd-label-floating"><?=Html::activeLabel($modeldetails,'profile');?></label>
+                            <?= $form->field($modeldetails, 'profile')->textInput(['maxlength' => true])->label(false); ?>
+                            <span class="bmd-help"><?=Html::activeHint($modeldetails,'profile');?></span>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group bmd-form-group">
+                            <label for="<?=Html::getInputId($modeldetails, 'materials');?>" class="bmd-label-floating"><?=Html::activeLabel($modeldetails,'materials');?></label>
+                            <?= $form->field($modeldetails, 'materials')->textInput(['maxlength' => true])->label(false); ?>
+                            <span class="bmd-help"><?=Html::activeHint($modeldetails,'materials');?></span>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group bmd-form-group">
+                            <label for="<?=Html::getInputId($modeldetails, 'executor');?>" class="bmd-label-floating"><?=Html::activeLabel($modeldetails,'executor');?></label>
+                            <?= $form->field($modeldetails, 'executor')->textInput(['maxlength' => true])->label(false); ?>
+                            <span class="bmd-help"><?=Html::activeHint($modeldetails,'executor');?></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div> 
+
+
             <div class="card-footer ml-auto mr-auto">
                 <?=  Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary'])  ?>
             </div>

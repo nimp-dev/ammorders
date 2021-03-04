@@ -59,13 +59,17 @@ class TypographyController extends \yii\web\Controller
         $id = Yii::$app->request->get('id');
 //        $model = $this->findModel($id);
         $model = Orders::findOne($id);
-        $orders = Orders_count::findOne($id);
+        $modelcount = Orders_count::findOne(['id_orders'=>$id]);
+        $modelcontact = Orders_contact::findOne(['id_orders'=>$id]);
+        $modeldetails = Orders_details::findOne(['id_orders'=>$id]);
 
 //        \Yii::$app->view->title = \Yii::t('app', 'Orders {userName}', ['userName'=>$model->fullName]);
 
         return $this->render('view', [
-            'model' => $model,
-            'orders' => $orders,
+                'model' => $model,
+                'modelcount' => $modelcount,
+                'modelcontact' => $modelcontact,
+                'modeldetails' => $modeldetails,
         ]);
     }
 
@@ -73,13 +77,19 @@ class TypographyController extends \yii\web\Controller
     {
         $model = new Orders();
         $modelcount = new Orders_count();
+        $modelcontact = new Orders_contact();
+        $modeldetails = new Orders_details();
 
         \Yii::$app->view->title = \Yii::t('app', 'Создать Ордер');
 
         if ($model->load(\Yii::$app->getRequest()->post()) && $model->save()) {
             $modelcount->id_orders = $model->id;
+            $modelcontact->id_orders = $model->id;
+            $modeldetails->id_orders = $model->id;
 
-                if($modelcount->load(\Yii::$app->getRequest()->post()) && $modelcount->save()) 
+                if($modelcount->load(\Yii::$app->getRequest()->post()) && $modelcount->save())
+                if($modelcontact->load(\Yii::$app->getRequest()->post()) && $modelcontact->save())
+                if($modeldetails->load(\Yii::$app->getRequest()->post()) && $modeldetails->save())  
 
             return $this->redirect(['index']);
         } else {
@@ -87,6 +97,8 @@ class TypographyController extends \yii\web\Controller
                 'action'=> 'create',
                 'model' => $model,
                 'modelcount' => $modelcount,
+                'modelcontact' => $modelcontact,
+                'modeldetails' => $modeldetails,
             ]);
         }
     }

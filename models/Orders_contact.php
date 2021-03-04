@@ -28,12 +28,12 @@ class Orders_contact extends ActiveRecord
     {
         return [
             'id' => '№',
-            'id_order' => '№ заказа',
+            'id_orders' => '№ заказа',
             'phone' => 'телефон',
             'addr' => 'Адрес',
             'name' => 'Имя',
-            'last_name' => 'дата начала',
-            'patron_name' => 'фамилия'
+            'last_name' => 'фамилия',
+            'patron_name' => 'отчество'
         ];
     }
 
