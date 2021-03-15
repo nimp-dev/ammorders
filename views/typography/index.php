@@ -41,10 +41,9 @@ use yii\widgets\Pjax;
                                 'dataProvider' => $dataProvider,
                                 'filterModel' => $searchModel,
                                 'columns' => [
-                                    'name',
-                                    'last_name',
-                                    'start_at',
-                                    'end_at',
+                                    'number',
+                                    'order_name',
+                                    'data',
                                     [
                                         'attribute' => 'status',
                                         'value'     => function($model) {

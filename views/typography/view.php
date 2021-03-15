@@ -20,9 +20,9 @@ use yii\widgets\DetailView;
                     <i class="material-icons">account_box</i>
                 </div>
                 <h4 class="card-title">
-                    <?=$model->getFullName();?>
+                   <p></p>
                     <div class="pull-right">
-                        <?= Html::a(Html::tag('b', 'keyboard_arrow_left', ['class' => 'material-icons']) , ['employess'], [
+                        <?= Html::a(Html::tag('b', 'keyboard_arrow_left', ['class' => 'material-icons']) , ['index'], [
                             'class' => 'btn btn-xs btn-success btn-round btn-fab',
                             'rel'=>"tooltip",
                             'data' => [
@@ -56,10 +56,9 @@ use yii\widgets\DetailView;
                     'model' => $model,
                     'attributes' => [
                         'id',
-                        'name',
-                        'last_name',
-                        'start_at',
-                        'end_at',
+                        'number',
+                        'order_name',
+                        'data',
                         [
                             'label' => 'Status',
                             'attribute' => 'status',
@@ -71,9 +70,7 @@ use yii\widgets\DetailView;
                 ]) ?>
             </div>
         </div>
-            <div class="row">
-                <div class="col-6">
-                <div class="card">
+                  <div class="card ">
                     <div class="card-body">
                         <?= DetailView::widget([
                             'model' => $modelcount,
@@ -87,9 +84,8 @@ use yii\widgets\DetailView;
                         ]) ?>
                     </div>
                 </div>
-                </div>
-                <div class="col-6">
-                <div class="card">
+
+                <div class="card ">
                     <div class="card-body">
                         <?= DetailView::widget([
                             'model' => $modelcontact,
@@ -104,6 +100,20 @@ use yii\widgets\DetailView;
                         ]) ?>
                     </div>
                 </div>
+
+                <div class="card ">
+                    <div class="card-body">
+                        <?= DetailView::widget([
+                            'model' => $modeldetails,
+                            'attributes' => [
+                                'id_orders',
+                                'item_name',
+                                'profile',
+                                'materials',
+                                'executor',
+                            ],
+                        ]) ?>
+                    </div>
                 </div>
 
             </div>

@@ -13,7 +13,7 @@ class OrdersSearch extends Orders {
             [['id'], 'integer'],
 //            [['name'], 'required'],
             [['status'], 'safe'],
-            [['name', 'last_name', 'start_at', 'end_at'], 'string', 'max' => 255],
+            [['number', 'order_name', 'data', 'status'], 'string', 'max' => 255],
         ];
     }
     function scenarios()
@@ -35,11 +35,10 @@ class OrdersSearch extends Orders {
         }
 
         $query->andFilterWhere(['id' => $this->id]);
-        $query->andFilterWhere(['like', 'name', $this->name])
-            ->andFilterWhere(['like', 'last_name', $this->last_name])
-            ->andFilterWhere(['like', 'start_at', $this->start_at])
-            ->andFilterWhere(['like', 'status', $this->status])
-            ->andFilterWhere(['like', 'end_at', $this->end_at]);
+        $query->andFilterWhere(['like', 'number', $this->number])
+            ->andFilterWhere(['like', 'order_name', $this->order_name])
+            ->andFilterWhere(['like', 'data', $this->data])
+            ->andFilterWhere(['like', 'status', $this->status]);
 
         return $dataProvider;
 

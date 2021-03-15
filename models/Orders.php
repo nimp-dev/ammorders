@@ -29,18 +29,17 @@ class Orders extends ActiveRecord
             [['id'], 'integer'],
 //            [['name'], 'required'],
 //            [['accept'], 'string'],
-            [['name', 'last_name', 'start_at', 'end_at','status'], 'string', 'max' => 255],
+            [['number', 'order_name', 'data','status'], 'string', 'max' => 255],
         ];
     }
 
     public function attributeLabels()
     {
         return [
-            'id' => '№',
-            'name' => 'Имя',
-            'last_name' => 'Фамилия',
-            'start_at' => 'дата начала',
-            'end_at' => 'дата здачи',
+            'id' => 'id',
+            'number' => '№ заказа',
+            'order_name' => 'название',
+            'data' => 'дата внесения',
             'status' => 'статус'
         ];
     }
@@ -53,9 +52,9 @@ class Orders extends ActiveRecord
         ];
     }
     
-    public function getFullName()
-    {
-        return trim(sprintf('%s %s', $this->name, $this->last_name));
-    }
+    // public function getFullName()
+    // {
+    //     return trim(sprintf('%s %s', $this->name, $this->last_name));
+    // }
 
 }

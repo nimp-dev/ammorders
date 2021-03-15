@@ -34,37 +34,28 @@ use yii\helpers\ArrayHelper;
                 <div class="row">
                     <div class="col-sm-6">
                         <div class="form-group bmd-form-group">
-                            <label for="<?=Html::getInputId($model, 'name');?>" class="bmd-label-floating"><?=Html::activeLabel($model,'name');?></label>
-                            <?= $form->field($model, 'name')->textInput(['maxlength' => true])->label(false); ?>
-                            <span class="bmd-help"><?=Html::activeHint($model,'name');?></span>
+                            <label for="<?=Html::getInputId($model, 'number');?>" class="bmd-label-floating"><?=Html::activeLabel($model,'number');?></label>
+                            <?= $form->field($model, 'number')->textInput(['maxlength' => true])->label(false); ?>
+                            <span class="bmd-help"><?=Html::activeHint($model,'number');?></span>
                         </div>
                     </div>
                     <div class="col-sm-6">
                         <div class="form-group bmd-form-group">
-                            <label for="<?=Html::getInputId($model, 'last_name');?>" class="bmd-label-floating"><?=Html::activeLabel($model,'last_name');?></label>
-                            <?= $form->field($model, 'last_name')->textInput(['maxlength' => true])->label(false); ?>
-                            <span class="bmd-help"><?=Html::activeHint($model,'last_name');?></span>
+                            <label for="<?=Html::getInputId($model, 'order_name');?>" class="bmd-label-floating"><?=Html::activeLabel($model,'order_name');?></label>
+                            <?= $form->field($model, 'order_name')->textInput(['maxlength' => true])->label(false); ?>
+                            <span class="bmd-help"><?=Html::activeHint($model,'order_name');?></span>
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-sm-6">
                         <div class="form-group bmd-form-group">
-                            <label for="<?=Html::getInputId($model, 'start_at');?>" class="bmd-label-floating"><?=Html::activeLabel($model,'start_at');?></label>
-                            <?= $form->field($model, 'start_at')->textInput(['maxlength' => true])->label(false); ?>
-                            <span class="bmd-help"><?=Html::activeHint($model,'start_at');?></span>
+                            <label for="<?=Html::getInputId($model, 'data');?>" class="bmd-label-floating"><?=Html::activeLabel($model,'data');?></label>
+                            <?= $form->field($model, 'data')->textInput(['maxlength' => true])->label(false); ?>
+                            <span class="bmd-help"><?=Html::activeHint($model,'data');?></span>
                         </div>
                     </div>
                     <div class="col-sm-6">
-                        <div class="form-group bmd-form-group">
-                            <label for="<?=Html::getInputId($model, 'end_at');?>" class="bmd-label-floating"><?=Html::activeLabel($model,'end_at');?></label>
-                            <?= $form->field($model, 'end_at')->textInput(['maxlength' => true])->label(false); ?>
-                            <span class="bmd-help"><?=Html::activeHint($model,'end_at');?></span>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-12">
                         <div class="form-group bmd-form-group">
                             <label for="<?=Html::getInputId($model, 'status');?>" class="bmd-label-floating"><?=Html::activeLabel($model,'status');?></label>
                             <?= $form->field($model, 'status')->textInput(['maxlength' => true])->label(false); ?>
