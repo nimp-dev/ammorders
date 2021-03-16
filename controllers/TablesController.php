@@ -10,6 +10,7 @@
  */
 namespace app\controllers;
 use app\models\User;
+use yii\base\Model;
 use app\models\Workers;
 use app\models\Time_list;
 use app\models\Clm_list_time;
@@ -19,6 +20,8 @@ use app\models\WorkersSearch;
 use yii\data\ActiveDataProvider;
 use Yii;
 use yii\web\NotFoundHttpException;
+use app\models\Timesheet;
+
 
 
 /**
@@ -218,6 +221,33 @@ class TablesController extends \yii\web\Controller
             return $this->render('form', [
                 'action'=> 'update',
                 'model' => $model,
+            ]);
+        }
+    }
+
+        public function actionTimesheet()
+    {
+        $workers = Workers::find()->all();
+        $timesheet_list = Timesheet::find()->all();
+        $timesheet = [new Timesheet()];
+
+        for($i = 1; $i < 3; $i++) {
+            $timesheet[] = new Timesheet();
+        }
+
+        if (Model::loadMultiple($timesheet, Yii::$app->request->post()) && Model::validateMultiple($timesheet)) {
+            foreach ($timesheet as $heet) {
+
+                //Try to save the models. Validation is not needed as it's already been done.
+                $heet->save(false);
+
+            }
+            return $this->redirect(['timesheet']);
+        } else {
+            return $this->render('timesheet', [
+                'timesheet_list' => $timesheet_list,
+                'workers' => $workers,
+                'timesheet' => $timesheet,
             ]);
         }
     }

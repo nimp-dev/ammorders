@@ -63,6 +63,12 @@
                             <p>Расчетый лист</p>
                         </a>
                     </li>
+                      <li class="nav-item ">
+                        <a class="nav-link" href="<?=\yii\helpers\Url::to(['/tables/timesheet']);?>">
+                            <i class="material-icons">library_books</i>
+                            <p>табель</p>
+                        </a>
+                    </li>
                     </ul>
                 </div>
             </li>
