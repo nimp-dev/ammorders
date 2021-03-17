@@ -228,15 +228,16 @@ class TablesController extends \yii\web\Controller
         public function actionTimesheet()
     {
         $workers = Workers::find()->all();
-        $timesheet_list = Timesheet::find()->all();
         $timesheet = [new Timesheet()];
+        $count = count($workers);
 
-        for($i = 1; $i < 3; $i++) {
+        for($i = 1; $i < $count; $i++) {
             $timesheet[] = new Timesheet();
         }
 
         if (Model::loadMultiple($timesheet, Yii::$app->request->post()) && Model::validateMultiple($timesheet)) {
             foreach ($timesheet as $heet) {
+                $heet->data='17.03.2021';
 
                 //Try to save the models. Validation is not needed as it's already been done.
                 $heet->save(false);
@@ -245,7 +246,6 @@ class TablesController extends \yii\web\Controller
             return $this->redirect(['timesheet']);
         } else {
             return $this->render('timesheet', [
-                'timesheet_list' => $timesheet_list,
                 'workers' => $workers,
                 'timesheet' => $timesheet,
             ]);

@@ -5,21 +5,36 @@ use yii\helpers\ArrayHelper;
 ?>
 <div class="content">
     <div class="container-fluid">
-<div class="row">
-    	<?php foreach ($workers as $worker) :?>
-    		<?= $worker->name?> <br>
-    	<?php endforeach ;?>
-</div>
+		<div class="row">
+		    		 <!-- <?= $workers[0]['name'] ?> -->
+		</div>
 
-<div class="row">
-	 <?php $form = ActiveForm::begin();?>
-	 <?php foreach ($timesheet as $index => $heet) :?>
-	 <?= $form->field($heet, "[$index]full_name")->textInput(['maxlength' => true])->label(false); ?>
-	 <?php endforeach ;?>
-	     <div class="form-group">
-        <?= Html::submitButton('сохранить', ['class' => 'btn btn-primary']) ?>
-    </div>
-	 <?php ActiveForm::end(); ?>
-</div>
+		<div class="row">
+			<div class="col-12">
+			 <?php $form = ActiveForm::begin();?>
+				 <table border="1" cellpadding="0">
+				 	<tr>
+				 		<th>
+				 		ФИО
+				 		</th>
+			 		</tr>
+				 <?php foreach ($timesheet as $index => $heet) :?>
+				 	<div class="row">
+				 		 <tr>
+						 <td><?= $form->field($heet, "[$index]full_name")->textInput(['readonly' => true, 'value' => $workers[$index]['name']])->label(false); ?></div></td>
+						 <?php for($i=1;$i<=30; $i++) :?>
+						 <td><?= $form->field($heet, "[$index]"."day".$i)->textInput(['maxlength' => true])->label(false); ?></td>
+						<?php endfor ;?>
+						</tr>
+				 	</div>
+				 
+				 <?php endforeach ;?>
+				 </table>
+				     <div class="form-group">
+			        <?= Html::submitButton('сохранить', ['class' => 'btn btn-primary']) ?>
+			    	 </div>
+			 <?php ActiveForm::end(); ?>
+			</div>
+		</div>
 	</div>
 </div>
